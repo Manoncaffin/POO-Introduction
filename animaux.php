@@ -2,17 +2,31 @@
 
 class Animal {
     public function info() {
-        echo "je suis un animal";
+        echo "Je suis un animal";
     }   
 }
-
-
-class Mammifère {
+class Mammifere extends Animal {
     public function infoPlus() {
-
+        echo "Je suis un mammifère";
     }
 }
-// var_dump();
+
+class Chien extends Mammifere {
+    public function crie() {
+        echo "J'aboie";
+    }
+}
+
+
+$Animal = new Animal();
+$Animal->info();
+echo "<br>";
+$Mammifere = new Mammifere();
+$Mammifere->infoPlus();
+echo "<br>";
+$Chien = new Chien();
+$Chien->crie();
+echo "<br>";
 
 
 ?>

@@ -8,16 +8,16 @@ public function drive() {
     echo "Vroum vroum à $this->speed km/h";
 }
 
-public function setSpeed($speed) {
-   $this->speed += $speed;
+public function shiftGear($addSpeed) {
+   $this->speed += $addSpeed;
 }
 }
-
+ 
 // nouvelle instance
 $myFormule1=new Formule1();
 // 
 $myFormule1->drive();
-$myFormule1->setSpeed(10);
+$myFormule1->shiftGear(addSpeed:10);
 $myFormule1->drive();
 var_dump($myFormule1);
 ?>
